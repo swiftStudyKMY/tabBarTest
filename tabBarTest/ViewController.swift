@@ -38,6 +38,10 @@ class ViewController: UIViewController {
         
     }
     
+    //메뉴얼 Segue
+    @IBAction func wind(_ sender: Any) {
+        self.performSegue(withIdentifier: "mw", sender: self)
+    }
     
     
 }
