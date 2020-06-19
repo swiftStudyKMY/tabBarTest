@@ -115,6 +115,7 @@ extension secondVC : WKNavigationDelegate{
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        self.spinner.stopAnimating()
         self.alert(error.localizedDescription)
     }
 }
