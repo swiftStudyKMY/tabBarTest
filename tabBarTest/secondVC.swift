@@ -58,16 +58,17 @@ class secondVC : UIViewController{
         self.requestURL(urlString: "https://m.youtube.com./")
     }
     @IBAction func shareBtn(_ sender: Any) {
-        alert("미구현")
+        
         let shareTxt = sb.placeholder
         
         let txtToShare = [shareTxt]
         
-        let vc = UIActivityViewController(activityItems: txtToShare, applicationActivities: nil)
+        let vc = UIActivityViewController(activityItems: txtToShare as [Any], applicationActivities: nil)
         
-        vc.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.mail ]
+//        vc.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.mail ]
+        vc.excludedActivityTypes = [UIActivity.ActivityType.airDrop]
         
-        self.present(self, animated: true, completion: nil)
+        self.present(vc, animated: true, completion: nil)
         
     }
     
